@@ -9,7 +9,17 @@ from time import sleep
 allowcfg=True # Использовать систему конфигураций. Обязателен файл gamecfg.txt в директории игры.
 olddesign=False # Использовать старый, кривой дизайн из CC! 1.6 и ранее. Новый дизайн содержит символы ╔║╙
 
+# создает то что блять требуется от игры
 
+try:
+    open("gamecfg.txt", "x")
+except FileExistsError:
+    pass
+
+try:
+    open("ccsave.txt", "x")
+except FileExistsError:
+    pass
 
 # Загрузка конфигурации
 
